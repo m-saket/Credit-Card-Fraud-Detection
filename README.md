@@ -1,23 +1,28 @@
 # Credit-Card-Fraud-Detection
-This project aims to build a robust Credit Card Fraud Detection Model using Machine Learning (Random Forest Classifier), starting from Exploratory Data Analysis (EDA) to deployment via Flask. The workflow is based on the famous Kaggle Credit Card Fraud Detection dataset.
+This project aims to build a robust Credit Card Fraud Detection Model using Machine Learning (Random Forest Classifier), starting from Exploratory Data Analysis (EDA) to deployment via Flask. The workflow is built on the popular **[Kaggle Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)**.
 
 ## Problem Statement
-Credit card fraud is a growing issue for financial institutions.
-Goal: Accurately classify transactions as Fraudulent (1) or Legitimate (0).
+Credit card fraud poses significant financial risks globally.  
+**Goal** → Accurately classify transactions as **Fraudulent (1)** or **Legitimate (0)**.
 
-Dataset contains 30 features:
--Time
--V1 to V28 (anonymized PCA features)
--Amount
--Target: Class (0/1)
+**Dataset Summary:**
+- **Total Features:** 30  
+- **Features:**
+  - `Time`
+  - `V1` to `V28` (PCA-transformed, anonymized)
+  - `Amount`
+- **Target Variable:** `Class` (0 = Legit, 1 = Fraud)
 
 ## Project Workflow
 
-### 1. Data Understanding & Exploration
-- Explored the **Kaggle Credit Card Fraud dataset**.
-- Analyzed **class imbalance (0 → Legitimate, 1 → Fraudulent)**.
-- Used **histograms**, **boxplots**, and **correlation heatmaps** for feature distribution insights.
-- Detected outliers in features like `V3`, `V4`, `V9`, `V10`, `V11`, etc.
+### 1. 📊 Data Understanding & EDA
+- Loaded and explored the **Kaggle Credit Card Fraud dataset**.
+- Identified **severe class imbalance** (Very few frauds vs legit transactions).
+- Visualized distributions using:
+  - **Histograms**
+  - **Boxplots**
+  - **Correlation Heatmaps**
+- Outlier detection in key features: `V3`, `V4`, `V9`, `V10`, `V11`, etc.
 
 ### 2. Feature Engineering
 - Created new features like:
@@ -33,11 +38,14 @@ Dataset contains 30 features:
 - Created separate datasets for both approaches and compared model performance.
 
 ### 4. Model Building & Evaluation
-- Tried 4 models on Normal, Undersampled, and Oversampled data:
-  - **Logistic Regression**
-  - **Decision Tree**
-  - **Random Forest**
-  - **XGBoost**
+Trained four different models on all three data variations (Normal, Undersampled, Oversampled):
+
+| Model | Accuracy | Precision | Recall | F1 Score | AUC |
+|------ |--------- |--------- |------ |-------- |--- |
+| Logistic Regression | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Decision Tree | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Random Forest | ✅ | ✅ | ✅ | ✅ | ✅ |
+| XGBoost | ✅ | ✅ | ✅ | ✅ | ✅ |
 
  - Evaluation metrics used:
     - **Accuracy**
@@ -49,6 +57,7 @@ Dataset contains 30 features:
     - **Feature Importance (Random Forest & XGBoost)**
 
 **Final Model Chosen**: ✅ **Random Forest on Oversampled Data**
+(best balance between **recall**, **F1 score**, and **AUC**)
 
 ### 5. Model Deployment (Flask + ngrok)
 - Created a **Random Forest pipeline** that includes all preprocessing steps:
@@ -64,7 +73,7 @@ Dataset contains 30 features:
 ### 6. Demo Screenshots
 - **Model Input Page**
 
-![Web UI](./images/web_ui.png)
+![Web UI]()
 
 - **Prediction Output**
 
