@@ -74,8 +74,8 @@ Trained four different models on all three data variations (Normal, Undersampled
 *🔐 Web App Input Page (Two-Column Layout):**
 
 <p align="center">
-  <img src="Images/P-1.png" alt="Input Left" width="45%" height="300px" style="margin-right:10px;"/>
-  <img src="Images/p-2.png" alt="Input Right" width="45%" height="300px"/>
+  <img src="Images/P-1.png" alt="Input Left" width="45%" height="600px" style="margin-right:10px;"/>
+  <img src="Images/p-2.png" alt="Input Right" width="45%" height="600px"/>
 </p>
 
 ---
