@@ -71,10 +71,20 @@ Trained four different models on all three data variations (Normal, Undersampled
 - Setup **ngrok** for public URL tunneling.
 
 ### 6. Demo Screenshots
-- **Model Input Page**
+*🔐 Web App Input Page (Two-Column Layout):**
 
-![Web UI]()
+<p align="center">
+  <img src="Images/P-1.png" alt="Input Left" width="45%" height="300px" style="margin-right:10px;"/>
+  <img src="Images/p-2.png" alt="Input Right" width="45%" height="300px"/>
+</p>
 
-- **Prediction Output**
+---
 
-![Prediction Result](./images/prediction_output.png)
+**✅ Prediction Output Page:**
+
+<p align="center">
+  <img src="Images/r-1.png" alt="Prediction Output" width="60%"/>
+</p>
+
+
+
